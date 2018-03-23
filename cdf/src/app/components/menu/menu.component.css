@@ -1,0 +1,6 @@
+.menu-bar{
+    padding-left: 5em;
+}
+.olymp-menu-icon,.olymp-close-icon:hover{
+    cursor: pointer;
+}

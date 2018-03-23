@@ -1,0 +1,614 @@
+
+<div class="body-bg-white">
+  <!-- Stunning header -->
+
+  <div class="stunning-header bg-primary-opacity">
+    <div class="header--standard header--standard-landing">
+      <app-menu></app-menu>
+    </div>
+    <div class="header-spacer--standard"></div>
+    <div class="stunning-header-content">
+      <h1 class="stunning-header-title">Careers</h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a routerLink="/">Home</a>
+          <span class="icon breadcrumbs-custom">/</span>
+        </li>
+        <li class="breadcrumbs-item active">
+          <span>Careers</span>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="content-bg-wrap">
+      <div class="content-bg stunning-header-bg1"></div>
+    </div>
+  </div>
+
+  <!-- End Stunning header -->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="ui-block responsive-flex1200">
+          <div class="ui-block-title">
+            <div class="w-select">
+              <div class="title">Filter By:</div>
+              <fieldset class="form-group">
+                <select class="selectpicker form-control">
+                  <option value="NU">All Categories</option>
+                  <option value="NU">Favourite</option>
+                  <option value="NU">Likes</option>
+                </select>
+              </fieldset>
+            </div>
+
+            <div class="w-select">
+              <fieldset class="form-group">
+                <select class="selectpicker form-control">
+                  <option value="NU">Date (Descending)</option>
+                  <option value="NU">Date (Ascending)</option>
+                </select>
+              </fieldset>
+            </div>
+
+            <a href="#" data-toggle="modal" data-target="#create-photo-album" class="btn btn-primary btn-md-2">Filter</a>
+
+            <form class="w-search">
+              <div class="form-group with-button">
+                <input class="form-control" type="text" name="searchedArticle" [(ngModel)]="searchedArticle" placeholder="Search Blog Posts......">
+                <button>
+                  <svg class="olymp-magnifying-glass-icon">
+                    <use xlink:href="assets/icons/icons.svg#olymp-magnifying-glass-icon"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="blog-post-wrap medium-padding80">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+
+          <div class="ui-block" *ngFor="let article of articles | searchPipe:'title':searchedArticle, let i = index">
+            <article class="hentry blog-post blog-post-v3">
+              <div class="post-thumb">
+                <img [src]="article.image" alt="photo">
+                <a href="#" class="post-category {{article.bgColor}}">{{article.category}}</a>
+              </div>
+              <div class="post-content">
+
+                <div class="author-date">
+                  by
+                  <a class="h6 post__author-name fn" href="#">{{article.author}}</a>
+                  <div class="post__date">
+                    <time class="published" datetime="2017-03-24T18:18">
+                      {{article.published}}
+                    </time>
+                  </div>
+                </div>
+
+                <a href="#" class="h3 post-title">{{article.title}}</a>
+                <p>
+                  {{article.content}}
+                </p>
+
+              </div>
+            </article>
+          </div>
+
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">...</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">12</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <aside>
+
+            <div class="ui-block">
+              <div class="ui-block-title">
+                <h6 class="title">Featured Posts</h6>
+              </div>
+            </div>
+
+            <div class="ui-block">
+              <article class="hentry blog-post blog-post-v3 featured-post-item">
+                <div class="post-thumb">
+                  <img src="assets/img/post13.jpg" alt="photo">
+                  <a href="#" class="post-category bg-purple">INSPIRATION</a>
+                </div>
+                <div class="post-content">
+
+                  <div class="author-date">
+                    by
+                    <a class="h6 post__author-name fn" href="#">JACK SCORPIO</a>
+                    <div class="post__date">
+                      <time class="published" datetime="2017-03-24T18:18">
+                        - 5 MONTHS ago
+                      </time>
+                    </div>
+                  </div>
+
+                  <a href="#" class="h4 post-title">We went lookhunting in all the California bay area</a>
+
+                </div>
+              </article>
+            </div>
+
+            <div class="ui-block">
+              <article class="hentry blog-post blog-post-v3 featured-post-item">
+                <div class="post-thumb">
+                  <img src="assets/img/post14.jpg" alt="photo">
+                  <a href="#" class="post-category bg-blue-light">THE COMMUNITY</a>
+                </div>
+                <div class="post-content">
+
+                  <div class="author-date">
+                    by
+                    <a class="h6 post__author-name fn" href="#">JACK SCORPIO</a>
+                    <div class="post__date">
+                      <time class="published" datetime="2017-03-24T18:18">
+                        - 2 MONTHS ago
+                      </time>
+                    </div>
+                  </div>
+
+                  <a href="#" class="h4 post-title">We went lookhunting in all the California bay area</a>
+
+                </div>
+              </article>
+            </div>
+
+            <div class="ui-block">
+              <article class="hentry blog-post blog-post-v3 featured-post-item">
+                <div class="post-thumb">
+                  <img src="assets/img/post15.jpg" alt="photo">
+                  <a href="#" class="post-category bg-purple">INSPIRATION</a>
+                </div>
+                <div class="post-content">
+
+                  <div class="author-date">
+                    by
+                    <a class="h6 post__author-name fn" href="#">MADDY SIMMONS </a>
+                    <div class="post__date">
+                      <time class="published" datetime="2017-03-24T18:18">
+                        - 3 MONTHS ago
+                      </time>
+                    </div>
+                  </div>
+
+                  <a href="#" class="h4 post-title">Check out this 10 yummy breakfast recipes</a>
+
+                </div>
+              </article>
+            </div>
+
+            <div class="ui-block">
+              <article class="hentry blog-post blog-post-v3 featured-post-item">
+                <div class="post-thumb">
+                  <img src="assets/img/post16.jpg" alt="photo">
+                  <a href="#" class="post-category bg-primary">OLYMPUS NEWS</a>
+                </div>
+                <div class="post-content">
+
+                  <div class="author-date">
+                    by
+                    <a class="h6 post__author-name fn" href="#">JACK SCORPIO</a>
+                    <div class="post__date">
+                      <time class="published" datetime="2017-03-24T18:18">
+                        - 6 MONTHS ago
+                      </time>
+                    </div>
+                  </div>
+
+                  <a href="#" class="h4 post-title">We optimized the Olympus App for better navigation</a>
+
+                </div>
+              </article>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="align-right pt160 pb80 section-move-bg call-to-action-animation scrollme">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+    <img class="first-img" alt="guy" src="assets/img/guy.png">
+    <img class="second-img" alt="rocket" src="assets/img/rocket1.png">
+    <div class="content-bg-wrap">
+      <div class="content-bg bg-section1"></div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="registration-login-form-popup">
+    <div class="modal-dialog ui-block window-popup registration-login-form-popup">
+      <a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
+        <svg class="olymp-close-icon">
+          <use xlink:href="assets/icons/icons.svg#olymp-close-icon"></use>
+        </svg>
+      </a>
+      <div class="registration-login-form">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">
+              <svg class="olymp-login-icon">
+                <use xlink:href="assets/icons/icons.svg#olymp-login-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">
+              <svg class="olymp-register-icon">
+                <use xlink:href="assets/icons/icons.svg#olymp-register-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="home1" role="tabpanel" data-mh="log-tab">
+            <div class="title h6">Register to Olympus</div>
+            <form class="content">
+              <div class="row">
+                <div class="col-lg-6 col-md-6">
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">First Name</label>
+                    <input class="form-control" placeholder="" type="text">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">Last Name</label>
+                    <input class="form-control" placeholder="" type="text">
+                  </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">Your Email</label>
+                    <input class="form-control" placeholder="" type="email">
+                  </div>
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">Your Password</label>
+                    <input class="form-control" placeholder="" type="password">
+                  </div>
+
+                  <div class="form-group date-time-picker label-floating">
+                    <label class="control-label">Your Birthday</label>
+                    <input name="datetimepicker" value="10/24/1984" />
+                    <span class="input-group-addon">
+                      <svg class="olymp-calendar-icon">
+                        <use xlink:href="assets/icons/icons.svg#olymp-calendar-icon"></use>
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div class="form-group label-floating is-select">
+                    <label class="control-label">Your Gender</label>
+                    <select class="selectpicker form-control">
+                      <option value="MA">Male</option>
+                      <option value="FE">Female</option>
+                    </select>
+                  </div>
+
+                  <div class="remember">
+                    <div class="checkbox">
+                      <label>
+                        <input name="optionsCheckboxes" type="checkbox"> I accept the
+                        <a href="#">Terms and Conditions</a> of the website
+                      </label>
+                    </div>
+                  </div>
+
+                  <a href="#" class="btn btn-purple btn-lg full-width">Complete Registration!</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-pane" id="profile1" role="tabpanel" data-mh="log-tab">
+            <div class="title h6">Login to your Account</div>
+            <form class="content">
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">Your Email</label>
+                    <input class="form-control" placeholder="" type="email">
+                  </div>
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">Your Password</label>
+                    <input class="form-control" placeholder="" type="password">
+                  </div>
+
+                  <div class="remember">
+
+                    <div class="checkbox">
+                      <label>
+                        <input name="optionsCheckboxes" type="checkbox"> Remember Me
+                      </label>
+                    </div>
+                    <a href="#" class="forgot">Forgot my Password</a>
+                  </div>
+
+                  <a href="#" class="btn btn-lg btn-primary full-width">Login</a>
+
+                  <div class="or"></div>
+
+                  <a href="#" class="btn btn-lg bg-facebook full-width btn-icon-left">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>Login with Facebook</a>
+
+                  <a href="#" class="btn btn-lg bg-twitter full-width btn-icon-left">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>Login with Twitter</a>
+
+
+                  <p>Don’t you have an account?
+                    <a href="#">Register Now!</a> it’s really simple and you can start enjoing all the benefits!</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-footer></app-footer>
+
+  <!-- Window-popup-CHAT for responsive min-width: 768px -->
+
+  <div class="ui-block popup-chat popup-chat-responsive">
+    <div class="ui-block-title">
+      <span class="icon-status online"></span>
+      <h6 class="title">Chat</h6>
+      <div class="more">
+        <svg class="olymp-three-dots-icon">
+          <use xlink:href="assets/icons/icons.svg#olymp-three-dots-icon"></use>
+        </svg>
+        <svg class="olymp-little-delete js-chat-open">
+          <use xlink:href="assets/icons/icons.svg#olymp-little-delete"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="mCustomScrollbar">
+      <ul class="notification-list chat-message chat-message-field">
+        <li>
+          <div class="author-thumb">
+            <img src="assets/img/avatar14-sm.jpg" alt="author" class="mCS_img_loaded">
+          </div>
+          <div class="notification-event">
+            <span class="chat-message-item">Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get
+              the drinks</span>
+            <span class="notification-date">
+              <time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time>
+            </span>
+          </div>
+        </li>
+
+        <li>
+          <div class="author-thumb">
+            <img src="assets/img/author-page.jpg" alt="author" class="mCS_img_loaded">
+          </div>
+          <div class="notification-event">
+            <span class="chat-message-item">Don’t worry Mathilda!</span>
+            <span class="chat-message-item">I already bought everything</span>
+            <span class="notification-date">
+              <time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:29pm</time>
+            </span>
+          </div>
+        </li>
+
+        <li>
+          <div class="author-thumb">
+            <img src="assets/img/avatar14-sm.jpg" alt="author" class="mCS_img_loaded">
+          </div>
+          <div class="notification-event">
+            <span class="chat-message-item">Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get
+              the drinks</span>
+            <span class="notification-date">
+              <time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <form>
+
+      <div class="form-group label-floating is-empty">
+        <label class="control-label">Press enter to post...</label>
+        <textarea class="form-control" placeholder=""></textarea>
+        <div class="add-options-message">
+          <a href="#" class="options-message">
+            <svg class="olymp-computer-icon">
+              <use xlink:href="assets/icons/icons.svg#olymp-computer-icon"></use>
+            </svg>
+          </a>
+          <div class="options-message smile-block">
+
+            <svg class="olymp-happy-sticker-icon">
+              <use xlink:href="assets/icons/icons.svg#olymp-happy-sticker-icon"></use>
+            </svg>
+
+            <ul class="more-dropdown more-with-triangle triangle-bottom-right">
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat1.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat2.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat3.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat4.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat5.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat6.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat7.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat8.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat9.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat10.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat11.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat12.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat13.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat14.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat15.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat16.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat17.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat18.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat19.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat20.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat21.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat22.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat23.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat24.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat25.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat26.png" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/icon-chat27.png" alt="icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- ... end Window-popup-CHAT for responsive min-width: 768px -->
+<app-goto-top></app-goto-top>
+</div>

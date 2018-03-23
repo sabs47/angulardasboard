@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="header--standard-wrap">
+
+    <a class="logo" routerLink="/">
+      <img src="./assets/img/logo-landing.png" alt="Olympus">
+      <h6 class="logo-title">Equestrians Net</h6>
+      SOCIAL NETWORK
+    </a>
+
+    <a href="#" class="open-responsive-menu js-open-responsive-menu">
+      <svg class="olymp-menu-icon">
+        <use xlink:href="icons/icons.svg#olymp-menu-icon"></use>
+      </svg>
+    </a>
+
+    <div class="nav nav-pills nav1 header-menu">
+      <div class="mCustomScrollbar">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+              aria-expanded="false" tabindex='1'>Profile</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Profile Page</a>
+              <a class="dropdown-item" href="#">Newsfeed</a>
+              <a class="dropdown-item" href="#">Post Versions</a>
+            </div>
+          </li>
+
+          <!-- shoping-cart -->
+          <div class="collapse menu" id="menu">
+            <ul class="profile-menu">
+              <li>
+                <a routerLink="/">Home</a>
+              </li>
+              <li>
+                <a routerLink="/about">About Us</a>
+              </li>
+              <li>
+                <a routerLink="/careers">Careers</a>
+              </li>
+              <li>
+                <a routerLink="/blog">Blog</a>
+              </li>
+              <li>
+                <a routerLink="/help-support">Help & Support</a>
+              </li>
+            </ul>
+          </div>
+          <li>
+
+            <div class="menu-bar" (click)="toggleMenu()">
+              <svg class="olymp-menu-icon" *ngIf="!menuIsShown">
+                <use xlink:href="/assets/icons/icons.svg#olymp-menu-icon"></use>
+              </svg>
+              <!--make this button appears once user click to menu -->
+              	<svg class="olymp-close-icon" *ngIf="menuIsShown">
+                  <use xlink:href="/assets/icons/icons.svg#olymp-close-icon" menu-close="true"></use>
+                </svg>
+            </div>
+
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
