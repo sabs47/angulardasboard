@@ -1,0 +1,10 @@
+.article-title{
+    margin-bottom: 1.5em;
+}
+.checkboxes{
+    margin-left: 2em;
+}
+textarea{
+    resize: none;
+    width: 100%;
+}

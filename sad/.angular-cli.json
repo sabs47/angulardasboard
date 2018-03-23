@@ -1,0 +1,114 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "equestrians-net-admin"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css",
+        "assets/global/css/bootstrap.min.css",
+        "assets/global/css/bootstrap-extend.min.css",
+        "assets/global/vendor/animsition/animsition.min.css",
+        "assets/global/vendor/asscrollable/asScrollable.min.css",
+        "assets/global/vendor/switchery/switchery.min.css",
+        "assets/global/vendor/intro-js/introjs.min.css",
+        "assets/global/vendor/slidepanel/slidePanel.min.css",
+        "assets/global/vendor/flag-icon-css/flag-icon.css",
+        "assets/global/vendor/waves/waves.min.css",
+        "assets/global/vendor/chartist/chartist.min.css",
+        "assets/global/vendor/summernote/summernote.css",
+        "assets/global/vendor/jvectormap/jquery-jvectormap.css",
+        "assets/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css",
+        "assets/css/site.min.css",
+        "assets/examples/css/dashboard/v1.css"
+      ],
+      "scripts": [
+        "assets/global/vendor/babel-external-helpers/babel-external-helpers.js",
+        "assets/global/vendor/jquery/jquery.js",
+        "assets/global/vendor/tether/tether.js",
+        "assets/global/vendor/bootstrap/bootstrap.js",
+        "assets/global/vendor/animsition/animsition.min.js",
+        "assets/global/vendor/mousewheel/jquery.mousewheel.js",
+        "assets/global/vendor/asscrollbar/jquery-asScrollbar.js",
+        "assets/global/vendor/asscrollable/jquery-asScrollable.min.js",
+        "assets/global/vendor/ashoverscroll/jquery-asHoverScroll.js",
+        "assets/global/vendor/waves/waves.min.js",
+        "assets/global/vendor/switchery/switchery.min.js",
+        "assets/global/vendor/intro-js/intro.min.js",
+        "assets/global/vendor/screenfull/screenfull.js",
+        "assets/global/vendor/slidepanel/jquery-slidePanel.js",
+        "assets/global/vendor/chartist/chartist.min.js",
+        "assets/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.min.js",
+        "assets/global/vendor/jvectormap/jquery-jvectormap.min.js",
+        "assets/global/vendor/jvectormap/maps/jquery-jvectormap-world-mill-en.js",
+        "assets/global/vendor/matchheight/jquery.matchHeight-min.js",
+        "assets/global/vendor/peity/jquery.peity.min.js",
+        "assets/global/vendor/summernote/summernote.min.js",
+        "assets/global/js/State.js",
+        "assets/global/js/Component.js",
+        "assets/global/js/Plugin.js",
+        "assets/global/js/Base.js",
+        "assets/global/js/Config.js",
+        "assets/js/Section/Menubar.js",
+        "assets/js/Section/Sidebar.js",
+        "assets/js/Section/PageAside.js",
+        "assets/js/Plugin/menu.js",
+        "assets/js/Site.js",
+        "assets/global/js/Plugin/asscrollable.js",
+        "assets/global/js/Plugin/slidepanel.js",
+        "assets/global/js/Plugin/switchery.js",
+        "assets/global/js/Plugin/matchheight.js",
+        "assets/global/js/Plugin/jvectormap.js",
+        "assets/global/js/Plugin/peity.js",
+        "assets/examples/js/dashboard/v1.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}
