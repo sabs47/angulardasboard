@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<!-- Page -->
+<div class="page">
+    <form>
+  <div class="page-header">
+    <h1 class="page-title text-center">New Article</h1>
+  </div>
+  <div class="page-content container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <!-- Panel Standard Editor -->
+        <div class="panel">
+          <div class="panel-body">
+            <div class="article-title col-md-8 col-sm-12">
+              <h4>Title</h4>
+              <input type="text" class="form-control focus" id="inputFocus" placeholder="Article Title Goes Here...">
+            </div>
+            <h4>Content</h4>
+            <!--<div id="summernote" data-plugin="summernote">-->
+                <textarea id="summernote" class="form-control" rows="3" name="summernote" [(ngModel)]="summernote">{{content}}</textarea>
+              
+            
+          </div>
+        </div>
+        <!-- End Panel Standard Editor -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel-heading">
+                <h4 class="panel-title">Categories</h4>
+              </div>
+              <div class="panel-body container-fluid">
+                <div class="row row-lg">
+                  <div class="col-md-12 checkboxes">
+                    <!-- Checkboxes -->
+                    <div class="checkbox-custom checkbox-primary" *ngFor="let category of categories">
+                      <input type="checkbox" id="{{category}}" />
+                      <label for="{{category}}">{{category}}</label>
+                    </div>
+                    <!-- End Checkboxes -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel-heading">
+                <h4 class="panel-title">SEO Tags</h4>
+              </div>
+              <div class="panel-body">
+                <div class="row row-lg">
+                  <div class="col-md-12">
+                    <tag-input [(ngModel)]='ceoTags'></tag-input>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <button class="btn btn-primary"   (click)="onSignin()">Create</button>
+      </div>
+    </div>
+  </div></form>
+
+</div>
