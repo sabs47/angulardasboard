@@ -1,0 +1,80 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "equestrians-net-dev"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css",
+        "assets/Bootstrap/dist/css/bootstrap-reboot.css",
+        "assets/Bootstrap/dist/css/bootstrap.css",
+        "assets/Bootstrap/dist/css/bootstrap-grid.css",
+        "assets/css/theme-styles.css",
+        "assets/css/blocks.css",
+        "assets/css/fonts.css",
+        "assets/css/jquery.mCustomScrollbar.min.css",
+        "assets/css/daterangepicker.css",
+        "assets/css/bootstrap-select.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "assets/js/material.min.js",
+        "assets/js/theme-plugins.js",
+        "assets/js/main.js",
+        "assets/js/selectize.min.js",
+        "assets/js/swiper.jquery.min.js",
+        "assets/js/mediaelement-and-player.min.js",
+        "assets/js/mediaelement-playlist-plugin.min.js",
+        "assets/js/moment.min.js",
+        "assets/js/daterangepicker.min.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}
